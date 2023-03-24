@@ -9,6 +9,8 @@ return {
     wrap = false, -- sets vim.opt.wrap
     tabstop = 4, -- Number of space in a tab
     shiftwidth = 4, -- Number of space inserted for indentation
+    cmdheight = 2,
+    showmode = true, -- Enable showing modes in command line
   },
   g = {
     mapleader = ";", -- sets vim.g.mapleader

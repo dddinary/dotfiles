@@ -7,22 +7,34 @@ return {
   -- first key is the mode
   n = {
     -- second key is the lefthand side of the map
-    -- mappings seen under group name "Buffer"
-    ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
+
+    -- tables with the `name` key will be registered with which-key if it's installed
+    -- this is useful for naming menus
+    ["<leader>b"] = { name = "Buffers" },
+    ["<leader>bn"] = { "<cmd>bn<cr>", desc = "Next Buffers" },
+    ["<leader>bp"] = { "<cmd>bp<cr>", desc = "Previous Buffers" },
     ["<leader>bD"] = {
       function()
         require("astronvim.utils.status").heirline.buffer_picker(function(bufnr) require("astronvim.utils.buffer").close(bufnr) end)
       end,
       desc = "Pick to close",
     },
-    -- tables with the `name` key will be registered with which-key if it's installed
-    -- this is useful for naming menus
-    ["<leader>b"] = { name = "Buffers" },
+
+    -- tab
+    ["<leader>a"] = { name = "Tab" },
+    ["<leader>aN"] = { "<cmd>tabnew<cr>", desc = "New tab" },
+    ["<leader>an"] = { "<cmd>tabnext<cr>", desc = "Next tab" },
+    ["<leader>ap"] = { "<cmd>tabprevious<cr>", desc = "Previous tab" },
+    ["<leader>af"] = { "<cmd>tabfirst<cr>", desc = "First tab" },
+    ["<leader>al"] = { "<cmd>tablast<cr>", desc = "Last tab" },
+    ["<leader>ad"] = { "<cmd>tabclose<cr>", desc = "Close current tab" },
+    ["<leader>ao"] = { "<cmd>tabonly<cr>", desc = "Close tabs except current" },
+
     -- quick save
-    -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-  },
-  t = {
-    -- setting a mapping to false will disable it
-    -- ["<esc>"] = false,
+    ["<C-s>"] = { ":w<cr>", desc = "Save File" },  -- change description but the same command
+
+    ["<leader>h"] = false,
+    ["<leader>w"] = false,
+
   },
 }
