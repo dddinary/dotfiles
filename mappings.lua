@@ -15,6 +15,7 @@ return {
     ["<leader>bn"] = { "<cmd>bn<cr>", desc = "Next Buffer" },
     ["<S-h>"] = { "<cmd>bp<cr>", desc = "Previous Buffer" },
     ["<S-l>"] = { "<cmd>bn<cr>", desc = "Next Buffer" },
+    ["<leader>bx"] = { "<cmd>bd<cr>", desc = "Close Buffer" },
     ["<leader>bD"] = {
       function()
         require("astronvim.utils.status").heirline.buffer_picker(function(bufnr) require("astronvim.utils.buffer").close(bufnr) end)
