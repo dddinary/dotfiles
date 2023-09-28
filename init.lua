@@ -19,7 +19,10 @@ return {
 
   -- Set colorscheme to use
   -- colorscheme = "astrodark",
-  colorscheme = "gruvbox",
+  -- colorscheme = "gruvbox",
+  -- colorscheme = "murphy",
+  -- colorscheme = "tokyonight",
+  colorscheme = "kanagawa",
   -- colorscheme = "catppuccin",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
