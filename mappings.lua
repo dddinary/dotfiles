@@ -46,6 +46,9 @@ return {
     -- taken from runtime/lua/_editor.lua
     ["<leader>ur"] = { "<Cmd>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>", desc = "Clear search, diff update and redraw" },
 
+    -- telescope file browser
+    ["<leader>fe"] = { ":Telescope file_browser<CR>", desc = "File browser"},
+
     ["<leader>h"] = false,
     ["<leader>w"] = false,
 
